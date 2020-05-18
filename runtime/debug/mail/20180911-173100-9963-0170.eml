@@ -1,0 +1,166 @@
+Message-ID: <caa3eeac3c575fe45ea154f573882038@help.ura.go.ug>
+Date: Tue, 11 Sep 2018 17:31:00 +0300
+Subject: ERRORS IN HELP.URA.GO.UG
+From: help@ura.go.ug
+To: fokumu@ura.go.ug, ewakoko@ura.go.ug
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+2018-09-11 17:31:00
+[10.2.36.36][-][-][error][yii\base\ViewNotFoundExcept=
+ion]
+yii\base\ViewNotFoundException: The view file does not exist:
+/var=
+/www/html/help.ura.go.ug/views/site/login.php in
+/var/www/html/help.ura.g=
+o.ug/vendor/yiisoft/yii2/base/View.php:229
+Stack trace:
+#0
+/var/www/h=
+tml/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php(152):
+yii\base\View-=
+>renderFile('/var/www/html/h...', Array,
+Object(backend\controllers\SiteC=
+ontroller))
+#1
+/var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Co=
+ntroller.php(381):
+yii\base\View->render('login', Array,
+Object(backend=
+\controllers\SiteController))
+#2
+/var/www/html/help.ura.go.ug/backend/c=
+ontrollers/SiteController.php(86):
+yii\base\Controller->render('login', A=
+rray)
+#3 [internal function]:
+backend\controllers\SiteController->actio=
+nLogin()
+#4
+/var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Inlin=
+eAction.php(57):
+call_user_func_array(Array, Array)
+#5
+/var/www/html/=
+help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(156):
+yii\base\Inl=
+ineAction->runWithParams(Array)
+#6
+/var/www/html/help.ura.go.ug/vendor/=
+yiisoft/yii2/base/Module.php(523):
+yii\base\Controller->runAction('login'=
+, Array)
+#7
+/var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/web/Applic=
+ation.php(102):
+yii\base\Module->runAction('site/login', Array)
+#8
+/v=
+ar/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Application.php(380):=
+
+yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/ww=
+w/html/help.ura.go.ug/backend/index.php(20):
+yii\base\Application->run()=
+
+#10 {main}
+2018-09-11 17:31:00 [10.2.36.36][-][-][info][application] $=
+_GET =3D [
+    'r' =3D> 'site/login'
+]
+
+$_COOKIE =3D [
+    '_csrf=
+-frontend' =3D>
+'6c8f24d409b48b855ffec2ff512207f9bd9eab430b8f5e8da85abeba=
+17c901b8a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"LjsjZDRO79whXrqnQvkwvQc=
+LhEijousN\";}'
+    'FRONTEND_SESSION' =3D> '4vc7f0l4ukedbhff4aaqrfh8d6'=
+
+    '_identity-frontend' =3D>
+'706dfd45bd8760c7c409fc1a3750ecbd02e939f=
+a3991567bac76a8f4c7cb8165a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:21:\"[1=
+4,\"swswsw\",2592000]\";}'
+    'customshelp-frontend' =3D> '4i9oegh1f9s5b=
+n63jar2o3og15'
+    'advanced-backend' =3D> 'rm5narju3j8tgh6kui13b5fr34'=
+
+]
+
+$_SERVER =3D [
+    'HTTP_HOST' =3D> 'help.ura.go.ug'
+    'HTT=
+P_CONNECTION' =3D> 'keep-alive'
+    'HTTP_CACHE_CONTROL' =3D> 'max-age=3D=
+0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' =3D> '1'
+    'HTTP_USER_AGENT' =
+=3D> 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+AppleWebKit/537.36 (KHTML=
+, like Gecko) Chrome/68.0.3440.106
+Safari/537.36 OPR/55.0.2994.44'
+    =
+'HTTP_ACCEPT' =3D>
+'text/html,application/xhtml+xml,application/xml;q=3D0=
+.9,image/webp,image/apng,*/*;q=3D0.8'
+    'HTTP_ACCEPT_ENCODING' =3D> 'gz=
+ip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' =3D> 'en-US,en;q=3D0.9'
+    'HT=
+TP_COOKIE' =3D>
+'_csrf-frontend=3D6c8f24d409b48b855ffec2ff512207f9bd9eab4=
+30b8f5e8da85abeba17c901b8a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3=
+Bi%3A1%3Bs%3A32%3A%22LjsjZDRO79whXrqnQvkwvQcLhEijousN%22%3B%7D;
+FRONTEND_=
+SESSION=3D4vc7f0l4ukedbhff4aaqrfh8d6;
+_identity-frontend=3D706dfd45bd8760=
+c7c409fc1a3750ecbd02e939fa3991567bac76a8f4c7cb8165a%3A2%3A%7Bi%3A0%3Bs%3A18=
+%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A21%3A%22%5B14%2C%22swswsw%22%2C25=
+92000%5D%22%3B%7D;
+customshelp-frontend=3D4i9oegh1f9s5bn63jar2o3og15;
+a=
+dvanced-backend=3Drm5narju3j8tgh6kui13b5fr34'
+    'PATH' =3D>
+'/usr/loc=
+al/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATU=
+RE' =3D> '<address>Apache/2.4.18 (Ubuntu) Server at
+help.ura.go.ug Port 8=
+0</address>
+'
+    'SERVER_SOFTWARE' =3D> 'Apache/2.4.18 (Ubuntu)'
+   =
+ 'SERVER_NAME' =3D> 'help.ura.go.ug'
+    'SERVER_ADDR' =3D> '10.1.0.146'=
+
+    'SERVER_PORT' =3D> '80'
+    'REMOTE_ADDR' =3D> '10.2.36.36'
+    =
+'DOCUMENT_ROOT' =3D> '/var/www/html/help.ura.go.ug'
+    'REQUEST_SCHEME' =
+=3D> 'http'
+    'CONTEXT_PREFIX' =3D> ''
+    'CONTEXT_DOCUMENT_ROOT' =
+=3D> '/var/www/html/help.ura.go.ug'
+    'SERVER_ADMIN' =3D> 'fokumu@ura.g=
+o.ug'
+    'SCRIPT_FILENAME' =3D>
+'/var/www/html/help.ura.go.ug/backend/=
+index.php'
+    'REMOTE_PORT' =3D> '61389'
+    'GATEWAY_INTERFACE' =3D> =
+'CGI/1.1'
+    'SERVER_PROTOCOL' =3D> 'HTTP/1.1'
+    'REQUEST_METHOD' =
+=3D> 'GET'
+    'QUERY_STRING' =3D> 'r=3Dsite%2Flogin'
+    'REQUEST_URI'=
+ =3D> '/backend/index.php?r=3Dsite%2Flogin'
+    'SCRIPT_NAME' =3D> '/back=
+end/index.php'
+    'PHP_SELF' =3D> '/backend/index.php'
+    'REQUEST_TI=
+ME_FLOAT' =3D> 1536676260.605
+    'REQUEST_TIME' =3D> 1536676260
+]

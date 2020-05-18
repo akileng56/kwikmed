@@ -1,0 +1,11 @@
+
+.kwikmed-logo {
+    display: inline-flex;
+}
+
+.kwikmed-logo-text {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+    color: #3fbbc0;
+}

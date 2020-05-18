@@ -1,0 +1,404 @@
+2018-09-11 17:28:21 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/help.ura.go.ug/views/site/login.php in /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php:229
+Stack trace:
+#0 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('login', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/help.ura.go.ug/backend/controllers/SiteController.php(86): yii\base\Controller->render('login', Array)
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/help.ura.go.ug/backend/index.php(20): yii\base\Application->run()
+#10 {main}
+2018-09-11 17:28:21 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:28:21 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:28:21 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'customshelp-frontend' => 'mv9f9dvksgisttrth3otaelhl6'
+    '_csrf-frontend' => '045a4d8cf97bcf1c8c1d49edec5dceaebd80bf8d3ac0eb2f528332e71072144aa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"xjlFqdym63Q4O093Kr9cYuHoB4aF0TYd\";}'
+    'FRONTEND_SESSION' => 'mg7sp6egpvtut5g1lsosn1k1r1'
+    'advanced-backend' => 'ohpq4i5smk0999eslh148ehmt1'
+    '_csrf-backend' => '0669c18f579f6eeb6e92b2ac72862664f0137a4295aa1a117566518f265b2a0ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"xhuO10tfzdJ3zJgbFnAoITD72l-160ms\";}'
+    'CLIENT_SESSION' => 'a96cbcb78mfm8fbgmbn4ihlvr1'
+    'HELPTOOL_CLIENT_SESSION' => 'naalac5h7k9lhu5lpf8mh3mc61'
+    'BACKEND_SESSIONS' => 'v707jj0gommlppcat9buuf8me3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'help.ura.go.ug'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'customshelp-frontend=mv9f9dvksgisttrth3otaelhl6; _csrf-frontend=045a4d8cf97bcf1c8c1d49edec5dceaebd80bf8d3ac0eb2f528332e71072144aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22xjlFqdym63Q4O093Kr9cYuHoB4aF0TYd%22%3B%7D; FRONTEND_SESSION=mg7sp6egpvtut5g1lsosn1k1r1; advanced-backend=ohpq4i5smk0999eslh148ehmt1; _csrf-backend=0669c18f579f6eeb6e92b2ac72862664f0137a4295aa1a117566518f265b2a0ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22xhuO10tfzdJ3zJgbFnAoITD72l-160ms%22%3B%7D; CLIENT_SESSION=a96cbcb78mfm8fbgmbn4ihlvr1; HELPTOOL_CLIENT_SESSION=naalac5h7k9lhu5lpf8mh3mc61; BACKEND_SESSIONS=v707jj0gommlppcat9buuf8me3'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at help.ura.go.ug Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'help.ura.go.ug'
+    'SERVER_ADDR' => '10.1.0.146'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '10.2.36.36'
+    'DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'SERVER_ADMIN' => 'fokumu@ura.go.ug'
+    'SCRIPT_FILENAME' => '/var/www/html/help.ura.go.ug/backend/index.php'
+    'REMOTE_PORT' => '61255'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1536676101.113
+    'REQUEST_TIME' => 1536676101
+]
+2018-09-11 17:28:21 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/help.ura.go.ug/views/site/login.php in /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php:229
+Stack trace:
+#0 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('login', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/help.ura.go.ug/backend/controllers/SiteController.php(86): yii\base\Controller->render('login', Array)
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/help.ura.go.ug/backend/index.php(20): yii\base\Application->run()
+#10 {main}
+2018-09-11 17:28:21 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:28:21 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:28:21 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'customshelp-frontend' => 'mv9f9dvksgisttrth3otaelhl6'
+    '_csrf-frontend' => '045a4d8cf97bcf1c8c1d49edec5dceaebd80bf8d3ac0eb2f528332e71072144aa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"xjlFqdym63Q4O093Kr9cYuHoB4aF0TYd\";}'
+    'FRONTEND_SESSION' => 'mg7sp6egpvtut5g1lsosn1k1r1'
+    'advanced-backend' => 'ohpq4i5smk0999eslh148ehmt1'
+    '_csrf-backend' => '0669c18f579f6eeb6e92b2ac72862664f0137a4295aa1a117566518f265b2a0ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"xhuO10tfzdJ3zJgbFnAoITD72l-160ms\";}'
+    'CLIENT_SESSION' => 'a96cbcb78mfm8fbgmbn4ihlvr1'
+    'HELPTOOL_CLIENT_SESSION' => 'naalac5h7k9lhu5lpf8mh3mc61'
+    'BACKEND_SESSIONS' => 'v707jj0gommlppcat9buuf8me3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'help.ura.go.ug'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'customshelp-frontend=mv9f9dvksgisttrth3otaelhl6; _csrf-frontend=045a4d8cf97bcf1c8c1d49edec5dceaebd80bf8d3ac0eb2f528332e71072144aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22xjlFqdym63Q4O093Kr9cYuHoB4aF0TYd%22%3B%7D; FRONTEND_SESSION=mg7sp6egpvtut5g1lsosn1k1r1; advanced-backend=ohpq4i5smk0999eslh148ehmt1; _csrf-backend=0669c18f579f6eeb6e92b2ac72862664f0137a4295aa1a117566518f265b2a0ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22xhuO10tfzdJ3zJgbFnAoITD72l-160ms%22%3B%7D; CLIENT_SESSION=a96cbcb78mfm8fbgmbn4ihlvr1; HELPTOOL_CLIENT_SESSION=naalac5h7k9lhu5lpf8mh3mc61; BACKEND_SESSIONS=v707jj0gommlppcat9buuf8me3'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at help.ura.go.ug Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'help.ura.go.ug'
+    'SERVER_ADDR' => '10.1.0.146'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '10.2.36.36'
+    'DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'SERVER_ADMIN' => 'fokumu@ura.go.ug'
+    'SCRIPT_FILENAME' => '/var/www/html/help.ura.go.ug/backend/index.php'
+    'REMOTE_PORT' => '61255'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1536676101.113
+    'REQUEST_TIME' => 1536676101
+]
+2018-09-11 17:31:00 [10.2.36.36][-][-][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/help.ura.go.ug/views/site/login.php in /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php:229
+Stack trace:
+#0 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('login', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/help.ura.go.ug/backend/controllers/SiteController.php(86): yii\base\Controller->render('login', Array)
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/help.ura.go.ug/backend/index.php(20): yii\base\Application->run()
+#10 {main}
+2018-09-11 17:31:00 [10.2.36.36][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:31:00 [10.2.36.36][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:31:00 [10.2.36.36][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '6c8f24d409b48b855ffec2ff512207f9bd9eab430b8f5e8da85abeba17c901b8a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"LjsjZDRO79whXrqnQvkwvQcLhEijousN\";}'
+    'FRONTEND_SESSION' => '4vc7f0l4ukedbhff4aaqrfh8d6'
+    '_identity-frontend' => '706dfd45bd8760c7c409fc1a3750ecbd02e939fa3991567bac76a8f4c7cb8165a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:21:\"[14,\"swswsw\",2592000]\";}'
+    'customshelp-frontend' => '4i9oegh1f9s5bn63jar2o3og15'
+    'advanced-backend' => 'rm5narju3j8tgh6kui13b5fr34'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'help.ura.go.ug'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf-frontend=6c8f24d409b48b855ffec2ff512207f9bd9eab430b8f5e8da85abeba17c901b8a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22LjsjZDRO79whXrqnQvkwvQcLhEijousN%22%3B%7D; FRONTEND_SESSION=4vc7f0l4ukedbhff4aaqrfh8d6; _identity-frontend=706dfd45bd8760c7c409fc1a3750ecbd02e939fa3991567bac76a8f4c7cb8165a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A21%3A%22%5B14%2C%22swswsw%22%2C2592000%5D%22%3B%7D; customshelp-frontend=4i9oegh1f9s5bn63jar2o3og15; advanced-backend=rm5narju3j8tgh6kui13b5fr34'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at help.ura.go.ug Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'help.ura.go.ug'
+    'SERVER_ADDR' => '10.1.0.146'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '10.2.36.36'
+    'DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'SERVER_ADMIN' => 'fokumu@ura.go.ug'
+    'SCRIPT_FILENAME' => '/var/www/html/help.ura.go.ug/backend/index.php'
+    'REMOTE_PORT' => '61389'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1536676260.605
+    'REQUEST_TIME' => 1536676260
+]
+2018-09-11 17:31:00 [10.2.36.36][-][-][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/help.ura.go.ug/views/site/login.php in /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php:229
+Stack trace:
+#0 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('login', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/help.ura.go.ug/backend/controllers/SiteController.php(86): yii\base\Controller->render('login', Array)
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/help.ura.go.ug/backend/index.php(20): yii\base\Application->run()
+#10 {main}
+2018-09-11 17:31:00 [10.2.36.36][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:31:00 [10.2.36.36][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:31:00 [10.2.36.36][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '6c8f24d409b48b855ffec2ff512207f9bd9eab430b8f5e8da85abeba17c901b8a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"LjsjZDRO79whXrqnQvkwvQcLhEijousN\";}'
+    'FRONTEND_SESSION' => '4vc7f0l4ukedbhff4aaqrfh8d6'
+    '_identity-frontend' => '706dfd45bd8760c7c409fc1a3750ecbd02e939fa3991567bac76a8f4c7cb8165a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:21:\"[14,\"swswsw\",2592000]\";}'
+    'customshelp-frontend' => '4i9oegh1f9s5bn63jar2o3og15'
+    'advanced-backend' => 'rm5narju3j8tgh6kui13b5fr34'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'help.ura.go.ug'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36 OPR/55.0.2994.44'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf-frontend=6c8f24d409b48b855ffec2ff512207f9bd9eab430b8f5e8da85abeba17c901b8a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22LjsjZDRO79whXrqnQvkwvQcLhEijousN%22%3B%7D; FRONTEND_SESSION=4vc7f0l4ukedbhff4aaqrfh8d6; _identity-frontend=706dfd45bd8760c7c409fc1a3750ecbd02e939fa3991567bac76a8f4c7cb8165a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A21%3A%22%5B14%2C%22swswsw%22%2C2592000%5D%22%3B%7D; customshelp-frontend=4i9oegh1f9s5bn63jar2o3og15; advanced-backend=rm5narju3j8tgh6kui13b5fr34'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at help.ura.go.ug Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'help.ura.go.ug'
+    'SERVER_ADDR' => '10.1.0.146'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '10.2.36.36'
+    'DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'SERVER_ADMIN' => 'fokumu@ura.go.ug'
+    'SCRIPT_FILENAME' => '/var/www/html/help.ura.go.ug/backend/index.php'
+    'REMOTE_PORT' => '61389'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1536676260.605
+    'REQUEST_TIME' => 1536676260
+]
+2018-09-11 17:34:55 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/help.ura.go.ug/views/site/login.php in /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php:229
+Stack trace:
+#0 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('login', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/help.ura.go.ug/backend/controllers/SiteController.php(86): yii\base\Controller->render('login', Array)
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/help.ura.go.ug/backend/index.php(20): yii\base\Application->run()
+#10 {main}
+2018-09-11 17:34:55 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:34:55 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:34:55 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'customshelp-frontend' => 'mv9f9dvksgisttrth3otaelhl6'
+    '_csrf-frontend' => '045a4d8cf97bcf1c8c1d49edec5dceaebd80bf8d3ac0eb2f528332e71072144aa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"xjlFqdym63Q4O093Kr9cYuHoB4aF0TYd\";}'
+    'FRONTEND_SESSION' => 'mg7sp6egpvtut5g1lsosn1k1r1'
+    'advanced-backend' => 'ohpq4i5smk0999eslh148ehmt1'
+    '_csrf-backend' => '0669c18f579f6eeb6e92b2ac72862664f0137a4295aa1a117566518f265b2a0ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"xhuO10tfzdJ3zJgbFnAoITD72l-160ms\";}'
+    'CLIENT_SESSION' => 'a96cbcb78mfm8fbgmbn4ihlvr1'
+    'HELPTOOL_CLIENT_SESSION' => 'naalac5h7k9lhu5lpf8mh3mc61'
+    'BACKEND_SESSIONS' => 'v707jj0gommlppcat9buuf8me3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'help.ura.go.ug'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'customshelp-frontend=mv9f9dvksgisttrth3otaelhl6; _csrf-frontend=045a4d8cf97bcf1c8c1d49edec5dceaebd80bf8d3ac0eb2f528332e71072144aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22xjlFqdym63Q4O093Kr9cYuHoB4aF0TYd%22%3B%7D; FRONTEND_SESSION=mg7sp6egpvtut5g1lsosn1k1r1; advanced-backend=ohpq4i5smk0999eslh148ehmt1; _csrf-backend=0669c18f579f6eeb6e92b2ac72862664f0137a4295aa1a117566518f265b2a0ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22xhuO10tfzdJ3zJgbFnAoITD72l-160ms%22%3B%7D; CLIENT_SESSION=a96cbcb78mfm8fbgmbn4ihlvr1; HELPTOOL_CLIENT_SESSION=naalac5h7k9lhu5lpf8mh3mc61; BACKEND_SESSIONS=v707jj0gommlppcat9buuf8me3'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at help.ura.go.ug Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'help.ura.go.ug'
+    'SERVER_ADDR' => '10.1.0.146'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '10.2.36.36'
+    'DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'SERVER_ADMIN' => 'fokumu@ura.go.ug'
+    'SCRIPT_FILENAME' => '/var/www/html/help.ura.go.ug/backend/index.php'
+    'REMOTE_PORT' => '61682'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1536676495.716
+    'REQUEST_TIME' => 1536676495
+]
+2018-09-11 17:34:55 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/help.ura.go.ug/views/site/login.php in /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php:229
+Stack trace:
+#0 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(backend\controllers\SiteController))
+#1 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('login', Array, Object(backend\controllers\SiteController))
+#2 /var/www/html/help.ura.go.ug/backend/controllers/SiteController.php(86): yii\base\Controller->render('login', Array)
+#3 [internal function]: backend\controllers\SiteController->actionLogin()
+#4 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#7 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#8 /var/www/html/help.ura.go.ug/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/help.ura.go.ug/backend/index.php(20): yii\base\Application->run()
+#10 {main}
+2018-09-11 17:34:55 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:34:55 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 10.2.36.36
+2018-09-11 17:34:55 [10.2.36.36][-][v707jj0gommlppcat9buuf8me3][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'customshelp-frontend' => 'mv9f9dvksgisttrth3otaelhl6'
+    '_csrf-frontend' => '045a4d8cf97bcf1c8c1d49edec5dceaebd80bf8d3ac0eb2f528332e71072144aa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"xjlFqdym63Q4O093Kr9cYuHoB4aF0TYd\";}'
+    'FRONTEND_SESSION' => 'mg7sp6egpvtut5g1lsosn1k1r1'
+    'advanced-backend' => 'ohpq4i5smk0999eslh148ehmt1'
+    '_csrf-backend' => '0669c18f579f6eeb6e92b2ac72862664f0137a4295aa1a117566518f265b2a0ca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"xhuO10tfzdJ3zJgbFnAoITD72l-160ms\";}'
+    'CLIENT_SESSION' => 'a96cbcb78mfm8fbgmbn4ihlvr1'
+    'HELPTOOL_CLIENT_SESSION' => 'naalac5h7k9lhu5lpf8mh3mc61'
+    'BACKEND_SESSIONS' => 'v707jj0gommlppcat9buuf8me3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'help.ura.go.ug'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'customshelp-frontend=mv9f9dvksgisttrth3otaelhl6; _csrf-frontend=045a4d8cf97bcf1c8c1d49edec5dceaebd80bf8d3ac0eb2f528332e71072144aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22xjlFqdym63Q4O093Kr9cYuHoB4aF0TYd%22%3B%7D; FRONTEND_SESSION=mg7sp6egpvtut5g1lsosn1k1r1; advanced-backend=ohpq4i5smk0999eslh148ehmt1; _csrf-backend=0669c18f579f6eeb6e92b2ac72862664f0137a4295aa1a117566518f265b2a0ca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22xhuO10tfzdJ3zJgbFnAoITD72l-160ms%22%3B%7D; CLIENT_SESSION=a96cbcb78mfm8fbgmbn4ihlvr1; HELPTOOL_CLIENT_SESSION=naalac5h7k9lhu5lpf8mh3mc61; BACKEND_SESSIONS=v707jj0gommlppcat9buuf8me3'
+    'HTTP_DNT' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at help.ura.go.ug Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'help.ura.go.ug'
+    'SERVER_ADDR' => '10.1.0.146'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '10.2.36.36'
+    'DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html/help.ura.go.ug'
+    'SERVER_ADMIN' => 'fokumu@ura.go.ug'
+    'SCRIPT_FILENAME' => '/var/www/html/help.ura.go.ug/backend/index.php'
+    'REMOTE_PORT' => '61682'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/index.php'
+    'PHP_SELF' => '/backend/index.php'
+    'REQUEST_TIME_FLOAT' => 1536676495.716
+    'REQUEST_TIME' => 1536676495
+]

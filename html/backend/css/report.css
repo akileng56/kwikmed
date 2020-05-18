@@ -1,0 +1,102 @@
+body { font-family: 'maiandra'; font-size: 12pt;  }
+.line {
+    width: 1000%;
+    height: 1px;
+    border: none;
+    height: 2px;
+    text-align: center;
+    color: #999999;
+    margin-top: -5px;
+    margin-bottom: 8pt;
+}
+
+.table {
+    border: 1px solid black;
+}
+
+.td-class {
+    border-top-color: black;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.heading {
+    color: #638399;
+    font-weight: bold;
+}
+
+.panel {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.panel-heading {
+    font-size: 15px;
+    color: #638399;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    padding: 8px;
+}
+
+.panel-heading-1 {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: #4e88c2;
+    padding: 8px;
+}
+
+.panel-default-1 {
+    border-top-width: 1px;
+    border-color: darkslategray;
+}
+
+.text-format {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.panel-body {
+    padding: 8px;
+}
+
+.station-details {
+    margin-left: 20px;
+}
+
+.name-style {
+    text-transform: capitalize;
+}
+
+.table-left {
+    border-left: 1px solid black;
+}
+
+.table-right {
+    border-right: 1px solid black;
+}
+
+.panel-display {
+    display: table;
+}
+
+.td-class-bottom {
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+table,
+table tr td,
+table tr th {
+    page-break-inside: avoid;
+}
+
+@media print
+{
+    div{
+        page-break-inside: avoid;
+    }
+}

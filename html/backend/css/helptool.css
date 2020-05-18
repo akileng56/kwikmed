@@ -1,0 +1,187 @@
+/*
+Other CSS for customiszing the look and feel on the different pages
+*/
+div#list_records_filter input[type="search"]{
+    width:300px;
+}
+
+.label-yellow {
+    background-color: #ffff00;
+    color: #5469da;
+}
+.label-yellow[href]:hover,
+.label-yellow[href]:focus {
+    background-color: #ffff00;
+    color: #5469da;
+}
+
+#reassignform-ticketsassigned {
+    display: inline-grid;
+}
+
+#reassignform-ticketsassigned > label {
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #cfdbe2;
+}
+
+.field-reassignform-ticketsassigned {
+    display: grid;
+}
+
+.field-reassignform-ticketsassigned > label{
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #cfdbe2;
+}
+
+.tile_count {
+    height: 125px;
+}
+
+.checkbox label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.checkbox .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 15%;
+}
+
+.checkbox label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"]+.cr>.cr-icon {
+    opacity: 0;
+}
+
+.checkbox label input[type="checkbox"]:checked+.cr>.cr-icon {
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled+.cr {
+    opacity: .5;
+}
+
+.wrap-text {
+    white-space: pre-wrap;
+    height: 64px;
+}
+
+.img-dec {
+    min-width: 100%;
+    max-width: 100%;
+}
+.row-style {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.image-style {
+    margin-left: -15px;
+}
+
+.text-style {
+    font-size: 16px;
+}
+
+.format-div {
+    margin:20px;
+}
+
+.label-inverse {
+    background-color: black;
+}
+
+
+
+body {
+    font-family: 'Segoe UI Local', 'Segoe UI Web (West European)';
+}
+
+h1, h2.h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: 'Segoe UI Local', 'Segoe UI Web (West European)';
+}
+
+@font-face {
+    font-family: 'Segoe UI Local';
+    src: local('Segoe UI Light');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Local';
+    src: local('Segoe UI Semilight');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Local';
+    src: local('Segoe UI');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Local';
+    src: local('Segoe UI Semibold');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Web (West European)';
+    src: url('../segoeui-fonts/segoeui-light.woff2') format('woff2'), url('../segoeui-fonts/segoeui-light.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Web (West European)';
+    src: url('../segoeui-fonts/segoeui-semilight.woff2') format('woff2'), url('../segoeui-fonts/segoeui-semilight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Web (West European)';
+    src: url('../segoeui-fonts/segoeui-regular.woff2') format('woff2'), url('../segoeui-fonts/segoeui-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI Web (West European)';
+    src: url('../segoeui-fonts/segoeui-semibold.woff2') format('woff2'), url('../segoeui-fonts/segoeui-semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.btn-customs-warning {
+    background-color: #faf629;
+    border-color: #faf629;
+    color: black;
+}
