@@ -1,0 +1,9 @@
+.card-img-top.img-responsive {
+    height: 220px;
+    object-fit: cover;
+}
+.qwikmed-subheading {
+    line-height: 22px;
+    font-size: 14px;
+    color: #54667a;
+}

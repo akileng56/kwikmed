@@ -5,6 +5,7 @@
  * Date: 3/27/2020
  * Time: 7:31 PM
  */
+use yii\helpers\Url;
 ?>
 
 <!-- Section: boxes -->
@@ -76,15 +77,18 @@
                         <div class="col-md-8">
                             <div class="wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="cta-text">
-                                    <h3>In an emergency? Need help now?</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit uisque interdum ante eget faucibus. </p>
+                                    <h3>Not feeling well? Need help now?</h3>
+                                    <p>No need to move when you not feeling well, consult now with top experienced doctors </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="wow lightSpeedIn" data-wow-delay="0.1s">
                                 <div class="cta-btn">
-                                    <a href="#" class="btn btn-skin btn-lg">Book an appoinment</a>
+                                    <a href="<?= Url::to(['specialities']); ?>" class="btn btn-skin btn-lg">
+                                        <i class="fa fa-clock-o m-r-10" aria-hidden="true"></i>
+                                        Consult Now
+                                    </a>
                                 </div>
                             </div>
                         </div>

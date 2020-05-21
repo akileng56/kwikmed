@@ -48,7 +48,7 @@ class SiteController extends Controller
                 'rules' => [
                     [
                         'actions' => ['index', 'login', 'home','signin', 'signup', 'logout','register','newmembership','membership',
-                            'gallery','projects','products','partners','about','services','blog','contact','cancel',
+                            'specialities','family','my-consultations','partners','about','services','blog','contact','cancel',
                             'cart','addtocart','removefromcart','updateitem','checkout','search','error','request-password-reset',
                             'reset-password' ],
                         'allow' => true
@@ -103,7 +103,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-
+        $this->layout = "front";
         return $this->redirect(Url::to(['site/home']));
 
     }
@@ -116,10 +116,8 @@ class SiteController extends Controller
      */
     public function actionHome()
     {
-        $news = News::find()->orderBy('created_at DESC')->asArray()->all();
-        return $this->render('home',[
-            'news' => $news
-        ]);
+        $this->layout = "front";
+        return $this->render('home');
     }
 
     /**
@@ -401,12 +399,9 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionGallery()
+    public function actionSpecialities()
     {
-        $galleries = Gallery::find()->orderBy('created_at DESC')->asArray()->all();
-        return $this->render('gallery',[
-            'galleries' => $galleries
-        ]);
+        return $this->render('specialities');
     }
 
     public function actionProjects()
@@ -417,17 +412,14 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionPartners()
+    public function actionFamily()
     {
-        $partners = Partner::find()->orderBy('created_at DESC')->asArray()->all();
-        return $this->render('partners',[
-            'partners' => $partners
-        ]);
+        return $this->render('family');
     }
 
-    public function actionBlog()
+    public function actionMyConsultations()
     {
-        return $this->render('blog');
+        return $this->render('myconsultations');
     }
 
     public function actionSearch()

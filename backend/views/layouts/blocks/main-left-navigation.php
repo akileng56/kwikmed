@@ -1,6 +1,5 @@
 <?php
 
-use common\models\HelpToolDropdowns;
 use yii\helpers\Url;
 
 

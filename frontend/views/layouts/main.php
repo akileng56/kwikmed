@@ -11,8 +11,6 @@ use yii\bootstrap\ActiveForm;
 MainAsset::register($this);
 
 $user = Yii::$app->user->identity;
-
-$searchModel = new SearchForm();
 ?>
 <!DOCTYPE html>
 <?php $this->beginPage() ?>
@@ -20,142 +18,147 @@ $searchModel = new SearchForm();
 <head>
     <meta charset="utf-8">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?> KWIKMED | UGANDA </title>
+    <title><?= Html::encode($this->title) ?> QWIKMED | UGANDA </title>
     <link rel="icon" href="<?= Yii::$app->homeUrl ?>html/app/img/logo.png">
     <?php $this->head() ?>
 </head>
-<body>
+<body class="fix-header fix-sidebar card-no-border">
 <?php $this->beginBody() ?>
-<div id="wrapper">
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+</div>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="<?= Yii::$app->homeUrl ?>">
+                    <!-- Logo icon -->
+                    <b>
+                        <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                        <!-- Dark Logo icon -->
+                        <img src="<?= Yii::$app->homeUrl ?>html/app/img/logo.png" alt="logo" width="100%"; class="dark-logo" />
 
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="top-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-6">
-                        <p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
-                    </div>
-                    <div class="col-sm-6 col-md-6">
-                        <p class="bold text-right">Call us +256 704 488 502</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container navigation">
-
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="kwikmed-logo navbar-brand" href="index.html">
-                    <img src="<?= Yii::$app->homeUrl ?>html/app/img/logo.png" alt="" width="100%"; height="45px"; />
-                    <span class="kwikmed-logo-text"> KWIKMED </span>
+                    </b>
+                    <!--End Logo icon -->
+                    <!-- Logo text -->
+                    <span>
+                            <!-- dark Logo text -->
+                            QWIKMED
+                    </span>
                 </a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#intro">Home</a></li>
-                    <li><a href="#service">Services</a></li>
-                    <li><a href="#doctor">Doctors</a></li>
-                    <li><a href="#facilities">Facilities</a></li>
-                    <li><a href="#partners">Partners</a></li>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-collapse">
+                <!-- ============================================================== -->
+                <!-- toggle and nav items -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav mr-auto mt-md-0 ">
+                    <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="icon-arrow-left-circle"></i></a> </li>
+                    <!-- This is  -->
+                    <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                    <li class="nav-item hidden-sm-down">
+                        <form class="app-search p-l-20">
+                            <input type="text" class="form-control" placeholder="Search for..."> <a class="srh-btn"><i class="ti-search"></i></a>
+                        </form>
+                    </li>
+                </ul>
+                <!-- ============================================================== -->
+                <!-- User profile and search -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav my-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span><i class="fa fa-user-circle-o" aria-hidden="true"></i>  Akileng Isaac </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                            <ul class="dropdown-user">
+                                <li>
+                                <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><i class="ti-wallet"></i> Wallet Balance</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <!-- Add a check on the person logged in -->
+                <?= $this->render('./sidemenu/user'); ?>
+            </nav>
+            <!-- End Sidebar navigation -->
         </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Content section -->
-
-    <div class="body-container">
-        <?= $content; ?>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <?= $content; ?>
+            <!-- ============================================================== -->
+            <!-- End PAge Content -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center">
+            © 2020 QwikMed | Uganda, A product of belaCals Ltd
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
     </div>
-
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-4">
-                    <div class="wow fadeInDown" data-wow-delay="0.1s">
-                        <div class="widget">
-                            <h5>About kwikmed</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet, ne nam purto nihil impetus, an facilisi accommodare sea
-                            </p>
-                        </div>
-                    </div>
-                    <div class="wow fadeInDown" data-wow-delay="0.1s">
-                        <div class="widget">
-                            <h5>Information</h5>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Laboratory</a></li>
-                                <li><a href="#">Medical treatment</a></li>
-                                <li><a href="#">Terms & conditions</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="wow fadeInDown" data-wow-delay="0.1s">
-                        <div class="widget">
-                            <h5>kwikmed center</h5>
-                            <p>
-                                Nam leo lorem, tincidunt id risus ut, ornare tincidunt naqunc sit amet.
-                            </p>
-                            <ul>
-                                <li>
-                    <span class="fa-stack fa-lg">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
-								</span> Monday - Saturday, 8am to 10pm
-                                </li>
-                                <li>
-                    <span class="fa-stack fa-lg">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-								</span> +62 0888 904 711
-                                </li>
-                                <li>
-                    <span class="fa-stack fa-lg">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-								</span> hello@medicio.com
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="wow fadeInDown" data-wow-delay="0.1s">
-                        <div class="widget">
-                            <h5>Our location</h5>
-                            <p>The Suithouse V303, Kuningan City, Jakarta Indonesia 12940</p>
-
-                        </div>
-                    </div>
-                    <div class="wow fadeInDown" data-wow-delay="0.1s">
-                        <div class="widget">
-                            <h5>Follow us</h5>
-                            <ul class="company-social">
-                                <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li class="social-google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li class="social-vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
-                                <li class="social-dribble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
 </div>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+
 
 <?php $this->endBody() ?>
 </body>
