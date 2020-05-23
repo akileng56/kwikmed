@@ -17,62 +17,44 @@ use yii\helpers\Url;
                     <span>ALL USERS</span>
                 </a>
             </li>
-            <li><a href="<?= Url::to(['membership/all']); ?>" title="Membership">
+            <li><a href="#" title="Specialities">
                     <i class="fa fa-object-group"></i>
-                    <span>MEMBERSHIP</span>
+                    <span>SPECIALITIES</span>
                 </a>
             </li>
-
-            <li><a href="<?= Url::to(['product/all']); ?>" title="Products">
-                    <i class="fa fa-shopping-basket"></i>
-                    <span>PRODUCTS</span>
-                </a>
-            </li>
-            <li><a href="<?= Url::to(['order/all']); ?>" title="Orders">
+            <li><a href="#" title="Symptoms">
                     <i class="fa fa-tasks"></i>
-                    <span>ORDERS</span>
+                    <span>SYMPTOMS</span>
                 </a>
             </li>
 
             <hr>
-            <li><a href="<?= Url::to(['project/all']); ?>" title="Projects">
+            <li><a href="#" title="Languages">
                     <i class="fa fa-cube"></i>
-                    <span>PROJECTS</span>
+                    <span>LANGUAGES</span>
                 </a>
             </li>
-            <li><a href="<?= Url::to(['gallery/all']); ?>" title="Gallery">
+            <li><a href="#" title="Consultations">
                     <i class="fa fa-picture-o"></i>
-                    <span>GALLERY</span>
+                    <span>CONSULTATIONS</span>
                 </a>
             </li>
 
-            <li><a href="<?= Url::to(['news/all']); ?>" title="News">
+            <li><a href="#" title="Transactions">
                     <i class="fa fa-newspaper-o"></i>
-                    <span>NEWS</span>
+                    <span>TRANSACTIONS</span>
                 </a>
             </li>
 
-            <li><a href="<?= Url::to(['partner/all']); ?>" title="News">
+            <li><a href="#" title="News">
                     <i class="fa fa-file-powerpoint-o"></i>
                     <span>PARTNERS</span>
                 </a>
             </li>
             <hr>
-            <li><a href="<?= Url::to(['product/supplies']); ?>" title="All supplies">
-                    <i class="fa fa-tasks"></i>
-                    <span>ALL SUPPLIES REPORT</span>
-                </a>
-            </li>
-
-            <hr>
-            <li><a href="<?= Url::to(['configs/all']); ?>" title="Configs Management">
-                    <i class="fa fa-cogs"></i>
-                    <span>System Configs</span>
-                </a>
-            </li>
             <li><a href="<?= Url::to(['admin/assignment']); ?>" title="Access Management">
                     <i class="fa fa-cog"></i>
-                    <span>Access Management</span>
+                    <span>ACCESS MANAGEMENT</span>
                 </a>
             </li>
         </ul>

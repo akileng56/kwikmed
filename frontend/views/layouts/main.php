@@ -5,8 +5,7 @@
 use frontend\assets\MainAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use frontend\models\SearchForm;
-use yii\bootstrap\ActiveForm;
+use common\models\User;
 
 MainAsset::register($this);
 
@@ -83,7 +82,9 @@ $user = Yii::$app->user->identity;
                 <ul class="navbar-nav my-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span><i class="fa fa-user-circle-o" aria-hidden="true"></i>  Akileng Isaac </span>
+                            <span><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                <?= $user ? User::findIdentity($user->getId())->phonenumber : '' ?>
+                            </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right animated flipInY">
                             <ul class="dropdown-user">
@@ -92,7 +93,7 @@ $user = Yii::$app->user->identity;
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#"><i class="ti-wallet"></i> Wallet Balance</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                <li><a href="<?= Url::to(['logout']); ?>"><i class="fa fa-power-off"></i> Logout</a></li>
                             </ul>
                         </div>
                     </li>

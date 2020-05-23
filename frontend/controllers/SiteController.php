@@ -103,9 +103,22 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout = "front";
-        return $this->redirect(Url::to(['site/home']));
-
+        if (Yii::$app->user->isGuest) {
+            $this->layout = "front";
+            return $this->render('home');
+        } else {
+            $type = Yii::$app->user->identity['role'];
+            $page = "";
+            switch ($type) {
+                case "doctor":
+                    $page = Url::to(['specialities']);
+                    break;
+                default:
+                    $page = Url::to(['specialities']);
+                    break;
+            }
+            return $this->redirect($page);
+        }
     }
 
 
@@ -145,7 +158,7 @@ class SiteController extends Controller
             return $this->redirect(Url::to(['site/index']));
         }
 
-        return $this->redirect(Url::to(['site/home']));
+        return $this->goHome();
     }
 
     /**
@@ -214,20 +227,17 @@ class SiteController extends Controller
     public function actionRegister()
     {
         $model = new SignupForm();
-        $model->category = 'user';
 
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 Yii::$app->session->setFlash('success', 'Account created successfully...');
-                return $this->redirect(Url::to(['site/signin']));
+                $this->goHome();
             } else {
                 Yii::$app->session->setFlash('error', 'Registration Failed... Please try again');
-                return $this->redirect(Url::to(['site/register']));
+                $this->goHome();
             }
         } else {
-            return $this->render('register', [
-                'model' => $model,
-            ]);
+            $this->goHome();
         }
     }
 
@@ -263,26 +273,20 @@ class SiteController extends Controller
         //Check if a form has been submitted
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            $username = $model->email;
-            $user = User::findByUsername($username);
+            $phonenumber = $model->phonenumber;
+            $user = User::findByPhoneNumber($phonenumber);
             if ($user) {
                 if($model->login()){
-                    if(Yii::$app->cart->count > 0){
-                        return $this->redirect(Url::to(['site/cart']));
-                    }else {
-                        return $this->redirect(Url::to(['site/products']));
-                    }
+                    return $this->redirect(Url::to(['site/index']));
                 } else {
                     Yii::$app->session->setFlash('failure', "Incorrect Email or Password");
                 }
             } else {
                 Yii::$app->session->setFlash('failure', "You have not yet registered to use this system.");
             }
-            return $this->redirect(Url::to(['site/signin']));
+            return $this->goHome();
         }else {
-            return $this->render('signin', [
-                'model' => $model,
-            ]);
+            return $this->redirect(Url::to(['site/home#signin']));
         }
     }
 

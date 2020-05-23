@@ -9,3 +9,6 @@
     font-size: 30px;
     color: #3fbbc0;
 }
+.kwikmed-divider {
+    border-right: 6px solid black;
+}

@@ -2,16 +2,12 @@
 
 namespace common\models;
 
-use backend\models\BusinessUnitLeader;
-use backend\models\CustomsOfficeLeaders;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
-use backend\models\UserModule;
-use yii\db\Query;
 /**
  * This is the model class for table "user".
  *
@@ -19,24 +15,28 @@ use yii\db\Query;
  * @property string $auth_key
  * @property string $password_hash
  * @property string $password_reset_token
+ * @property integer $otp
+ * @property string $phonenumber
+ * @property string $role
  * @property string $email
  * @property integer $created_at
  * @property integer $updated_at
- * @property string $firstname
- * @property string $lastname
- * @property string $telephone
- * @property string $category
+ *
  */
 class User extends ActiveRecord implements IdentityInterface {
 
 	/***
      * Stations where I work from/Where a client is attached to
+     *
      */
-
 	
     /**
      * @inheritdoc
      */
+    public $email;
+    public $created_at;
+    public $updated_at;
+
     public static function tableName() {
         return '{{%user}}';
     }
@@ -56,14 +56,15 @@ class User extends ActiveRecord implements IdentityInterface {
     public function rules() {
         return [
 
-            [['auth_key', 'password_hash', 'email', 'firstname', 'lastname', 'category'], 'required'],
-            [['created_at'], 'integer'],
-            [[ 'password_hash', 'password_reset_token', 'email', 'firstname', 'lastname'], 'string', 'max' => 255],
+            [['auth_key', 'password_hash',  'role'], 'required'],
+            [[ 'password_hash', 'password_reset_token','email'], 'string', 'max' => 255],
+            [[ 'created_at', 'updated_at'], 'integer'],
             [['auth_key'], 'string', 'max' => 32],
-            [['telephone', 'category'], 'string', 'max' => 50],
-            [['email'], 'unique'],
+            [['phonenumber', 'role'], 'string', 'max' => 50],
+            [['phonenumber','email'], 'unique'],
             [['email'], 'email'],
             [['password_reset_token'], 'unique'],
+            [[ 'created_at', 'updated_at'], 'default', 'value' => time()],
         ];
     }
 
@@ -76,13 +77,12 @@ class User extends ActiveRecord implements IdentityInterface {
             'auth_key' => 'Auth Key',
             'password_hash' => 'Password Hash',
             'password_reset_token' => 'Password Reset Token',
+            'otp' => 'OTP',
+            'phonenumber' => 'Phone Number',
+            'role' => 'User Role',
             'email' => 'Email',
-            'created_at' => 'Date Registered',
-            'updated_at' => 'Last Update Date',
-            'firstname' => 'First name',
-            'lastname' => 'Last name',
-            'telephone' => 'Telephone',
-            'category' => 'Category'
+            'created_at' => 'Created At',
+            'updated_at' => 'Updated At'
         ];
     }
 
@@ -106,12 +106,12 @@ class User extends ActiveRecord implements IdentityInterface {
      * @param string $username
      * @return static|null
      */
-    public static function findByUsername($email) {
-        return static::findOne(['email' => $email]);
+    public static function findByPhoneNumber($phonenumber) {
+        return static::findOne(['phonenumber' => $phonenumber]);
     }
 
-    public static function findAdminUser($email) {
-        return User::find()->where(['email' => $email])->andWhere(['category' => 'admin'])->one();
+    public static function findAdminUser($id) {
+        return User::find()->where(['id' => $id])->andWhere(['role' => 'admin'])->one();
     }
     /**
      * Finds user by password reset token
@@ -210,17 +210,6 @@ class User extends ActiveRecord implements IdentityInterface {
         return User::find()->all();
     }
 
-
-    
-    public function getFullName(){
-        return ucwords(strtolower($this->firstname . " " . $this->lastname));
-    }
-
-    public function getUserFullNames() {
-        return $this->$this->firstname . " " . $this->lastname;
-    }
-
-	
     /**
      * Details of the currently logged in User
      * @return \common\models\User
@@ -228,11 +217,4 @@ class User extends ActiveRecord implements IdentityInterface {
     public static function findLoggedInUser() {
         return self::findOne(Yii::$app->user->id);
     }
-	
-
-
-
-
-
-
 }

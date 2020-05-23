@@ -1,12 +1,8 @@
 <?php
 
 use common\models\HelpToolDropdowns;
-use kartik\checkbox\CheckboxX;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use yii\helpers\ArrayHelper;
-
-//Business Units
 
 $this->title = 'Update Member details';
 ?>
@@ -18,30 +14,26 @@ $this->title = 'Update Member details';
     <table class="table">
         <tr>
             <td>
-                <?= $form->field($model, 'firstname')->label('First Name'); ?>
+                <?= $form->field($model, 'phonenumber')->label('Phone Number'); ?>
             </td>
             <td>
-                <?= $form->field($model, 'lastname')->label('Last Name'); ?>
-            </td>
-            <td>
-                <?=
-                $form->field($model, 'category')->radioList(
-                    [
-                        'admin' => 'Administrator',
-                        'user' => 'User'
-                    ]
-                )
-                ?>
+                <?= $form->field($model, 'email')->label('Email'); ?>
             </td>
         </tr>
-        <tr>
-            <td><?= $form->field($model, 'telephone')->label('Telephone No.'); ?></td>
-            <td><?= $form->field($model, 'email') ?></td>
-        </tr>
-        <tr>
 
 
         </tr>
+        <td>
+            <?=
+            $form->field($model, 'role')
+                ->dropDownList(
+                    ['admin' => 'Administrator', 'user' => 'User'],
+                    ['prompt'=>'']
+                );
+            ?>
+        </td>
+        </tr>
+
         <tr>
             <td>
                 <?= Html::submitButton('Update User Details', ['class' => 'btn btn-success', 'name' => 'signup-button']) ?>

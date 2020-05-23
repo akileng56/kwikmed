@@ -63,7 +63,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $user = User::findOne(Yii::$app->user->id);
-        if ($user->category == 'admin'){
+        if ($user->role == 'admin'){
             return $this->redirect(['user/all-users']);
         } else {
             Yii::$app->session->setFlash('failure', 'You do not have the right to login here');

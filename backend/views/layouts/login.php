@@ -20,7 +20,7 @@ $user = Yii::$app->user->identity;
 <html lang="en">
     <head>
         <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?> NOGAMU | UGANDA</title>
+        <title><?= Html::encode($this->title) ?> QWIKMED | UGANDA</title>
         <?php $this->head() ?>
         <style>
             body {
@@ -65,7 +65,7 @@ $user = Yii::$app->user->identity;
             }
 
         </style>
-        <link rel="icon" href="<?= HELP_BASE_PATH ?>html/app/img/favicon.png">
+        <link rel="icon" href="<?= HELP_BASE_PATH ?>html/app/img/logo.png">
     </head>
     <?php $this->beginBody() ?>
     <body>

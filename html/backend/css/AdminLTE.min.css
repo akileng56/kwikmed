@@ -97,7 +97,7 @@ body {
 	border-top: 1px solid #d2d6de
 }
 
-.fixed .main-header, .fixed .main-sidebar, .fixed .left-side {
+.fixed .main-header, .fixed, .fixed .left-side {
 	position: fixed
 }
 
@@ -126,7 +126,7 @@ body {
 }
 
 .hold-transition .content-wrapper, .hold-transition .right-side,
-	.hold-transition .main-footer, .hold-transition .main-sidebar,
+	.hold-transition .main-footer, .hold-transition ,
 	.hold-transition .left-side, .hold-transition .main-header .navbar,
 	.hold-transition .main-header .logo, .hold-transition .menu-open .fa-angle-left
 	{
@@ -414,20 +414,6 @@ a:hover, a:active, a:focus {
 	}
 }
 
-.main-sidebar {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding-top: 50px;
-	min-height: 100%;
-	width: 230px;
-	z-index: 810;
-	-webkit-transition: -webkit-transform .3s ease-in-out, width .3s
-		ease-in-out;
-	-moz-transition: -moz-transform .3s ease-in-out, width .3s ease-in-out;
-	-o-transition: -o-transform .3s ease-in-out, width .3s ease-in-out;
-	transition: transform .3s ease-in-out, width .3s ease-in-out
-}
 
 @media ( max-width :767px) {
 	.main-sidebar {

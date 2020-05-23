@@ -11,21 +11,15 @@ use yii\helpers\Url;
 
 <div class="box box-success">
 <div style="margin: 20px">
-<table class="table table-striped" id="records_list">
+<table class="table table-striped" id="records">
     <thead>
         <tr>
-            <th>
-                First Name
-            </th>
-            <th>Last Name</th>
+            <th>Phone Number</th>
             <th>
                 Email
             </th>
             <th>
-                Category
-            </th>
-            <th>
-                Phone Number
+                User Role
             </th>
             <th></th>
         </tr>
@@ -33,11 +27,9 @@ use yii\helpers\Url;
     <tbody>
         <?php foreach ($users AS $user) { ?>
             <tr>
-                <th><?= $user['firstname']; ?></th>
-                <td> <?= $user['lastname']; ?>  </td>
+                <td> <?= $user['phonenumber']; ?>  </td>
                 <td> <?= $user['email']; ?>  </td>
-                <td> <?= $user['category']; ?>  </td>
-                <td> <?= $user['telephone']; ?>  </td>
+                <td> <?= $user['role']; ?>  </td>
                 <td>
                     <a href='<?= Url::to(['user/update', 'id' => $user['id']]); ?>' class='btn btn-default'>
                         <i class='fa fa-pencil'></i> Edit

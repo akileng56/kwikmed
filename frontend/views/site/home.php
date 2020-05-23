@@ -53,3 +53,5 @@ use yii\helpers\Url;
 <?= $this->render('facilities'); ?>
 
 <?= $this->render('partners'); ?>
+
+<?= $this->render('signin'); ?>

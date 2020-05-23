@@ -59,7 +59,7 @@ $searchModel = new SearchForm();
                     <li><a href="#service">Services</a></li>
                     <li><a href="#doctor">Doctors</a></li>
                     <li><a href="#facilities">Facilities</a></li>
-                    <li><a href="#partners">Partners</a></li>
+                    <li><a href="#signin">Login / Signup </a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

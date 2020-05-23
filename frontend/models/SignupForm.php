@@ -12,12 +12,9 @@ use backend\models\UserModule;
  */
 class SignupForm extends Model {
 
-    public $email;
     public $password;
-    public $category;
-    public $lastname;
-    public $firstname;
-    public $telephone;
+    public $phonenumber;
+    public $email;
 
 	
 	/* * *
@@ -30,13 +27,12 @@ class SignupForm extends Model {
      */
     public function rules() {
         return [
-            [['email'], 'trim'],
-            [['email', 'password', 'category', 'firstname', 'lastname', 'telephone'], 'required'],
-            [['lastname', 'firstname'], 'string', 'min' => 2, 'max' => 255],
-            [['telephone'], 'string', 'min' => 10, 'max' => 25],
+            [['phonenumber'], 'trim'],
+            [['password', 'phonenumber'], 'required'],
+            [['phonenumber', 'password'], 'string', 'min' => 2, 'max' => 255],
+            [['phonenumber'], 'string', 'min' => 10, 'max' => 25],
             ['email', 'email'],
             [['email'], 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
             ['password', 'string', 'min' => 6],
         ];
     }
@@ -53,13 +49,11 @@ class SignupForm extends Model {
 
         $user = new User();
         $user->setAttribute('email', $this->email);
-        $user->setAttribute('category', $this->category);
-        $user->setAttribute('lastname', $this->lastname);
-        $user->setAttribute('firstname', $this->firstname);
-        $user->setAttribute('telephone', $this->telephone);
+        $user->setAttribute('phonenumber', $this->phonenumber);
+        $user->setAttribute('role', 'user');
+        $user->setAttribute('created_at', time());
         $user->setPassword($this->password);
         $user->generateAuthKey();
-        $user->created_at = time();
         $user->password_reset_token = '';
 
         if ($user->validate() && $user->save()) {
