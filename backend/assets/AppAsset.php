@@ -12,17 +12,19 @@ class AppAsset extends AssetBundle {
     public $basePath = '@webroot';
     public $baseUrl = "@web/../html/";
     public $css = [
-        'plainwhite/css/bootstrap.min.css',
-        'plainwhite/css/style.css',
-        'plainwhite/css/megna.css',
-        'plainwhite/css/qwikmed.css',
         'vendor/datatables/media/css/jquery.dataTables.min.css',
         'backend/datatables/css/buttons.dataTables.min.css',
         'backend/css/AdminLTE.min.css',
         'backend/css/_all-skins.min.css',
+        'backend/css/custom.css',
+        'plainwhite/css/bootstrap.min.css',
+        'plainwhite/css/style-main.css',
+        'plainwhite/css/megna.css',
+        'plainwhite/css/qwikmed.css',
     ];
     public $js = [
         'plainwhite/js/tether.min.js',
+        'plainwhite/js/popper.min.js',
         'plainwhite/js/bootstrap.min.js',
         'plainwhite/js/jquery.slimscroll.js',
         'plainwhite/js/waves.js',

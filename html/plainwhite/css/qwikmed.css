@@ -7,3 +7,16 @@
     font-size: 14px;
     color: #54667a;
 }
+.sidebar-item-custom {
+    font-size: 14px;
+}
+.qwikmed-header-text {
+    display: flex;
+}
+.qwikmed-header-text > small {
+    margin-top: 22px;
+    margin-left: 7px;
+}
+.qwikmed-table, .qwikmed-table > thead > tr > th {
+    text-align: center;
+}

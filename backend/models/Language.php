@@ -5,20 +5,19 @@ namespace backend\models;
 use Yii;
 
 /**
- * This is the model class for table "configs".
+ * This is the model class for table "language".
  *
  * @property integer $id
  * @property string $name
- * @property string $value
  */
-class Configs extends \yii\db\ActiveRecord
+class Language extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'configs';
+        return 'language';
     }
 
     /**
@@ -27,9 +26,8 @@ class Configs extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'value'], 'required'],
-            [['value'], 'string'],
-            [['name'], 'string', 'max' => 64],
+            [['name'], 'required'],
+            [['name'], 'string', 'max' => 100],
         ];
     }
 
@@ -41,7 +39,6 @@ class Configs extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
-            'value' => 'Value',
         ];
     }
 }

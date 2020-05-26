@@ -33,9 +33,6 @@ class User extends ActiveRecord implements IdentityInterface {
     /**
      * @inheritdoc
      */
-    public $email;
-    public $created_at;
-    public $updated_at;
 
     public static function tableName() {
         return '{{%user}}';
