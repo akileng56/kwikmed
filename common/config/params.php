@@ -9,6 +9,7 @@ return [
     'X-Callback-Url' => 'https://nogamu.org/',
     'partyId' => '46733123454',
     'Ocp-Apim-Subscription-Key' => '3cdcc69ec414469d862a4dda934823b6',
-    'Authorization' => 'Basic MjFhNTVkZWYtMDgyMC00OTIzLWJmNjItMTIwZGNjMGFiMWRhOmY2Y2ZiOGU3OTg4NDRhZGE5YTNlNDZhNjI1MDIzZmJl'
+    'Authorization' => 'Basic MjFhNTVkZWYtMDgyMC00OTIzLWJmNjItMTIwZGNjMGFiMWRhOmY2Y2ZiOGU3OTg4NDRhZGE5YTNlNDZhNjI1MDIzZmJl',
+    'bsDependencyEnabled' => false
 
 ];

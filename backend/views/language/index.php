@@ -11,7 +11,7 @@ use yii\helpers\Html;
 </section>
 
 <p>
-    <?= Html::a('Create Language', ['create'], ['class' => 'btn btn-success']) ?>
+    <?= Html::a('<i class="mdi mdi-plus-circle"></i> Create Language', ['create'], ['class' => 'btn btn-success']) ?>
 </p>
 
 <div class="box box-success">
