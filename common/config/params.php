@@ -11,5 +11,4 @@ return [
     'Ocp-Apim-Subscription-Key' => '3cdcc69ec414469d862a4dda934823b6',
     'Authorization' => 'Basic MjFhNTVkZWYtMDgyMC00OTIzLWJmNjItMTIwZGNjMGFiMWRhOmY2Y2ZiOGU3OTg4NDRhZGE5YTNlNDZhNjI1MDIzZmJl',
     'bsDependencyEnabled' => false
-
 ];
