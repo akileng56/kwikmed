@@ -19,7 +19,7 @@ use yii\helpers\Url;
                 </a>
                 <ul aria-expanded="false" class="collapse" style="">
                     <li><a href="<?= Url::to(['user/all-users']); ?>">User Accounts</a></li>
-                    <li><a href="<?= Url::to(['doctor/index']); ?>">Doctors</a></li>
+                    <li><a href="<?= Url::to(['doctor/all']); ?>">Doctors</a></li>
                     <li><a href="#">Patients</a></li>
                 </ul>
             </li>

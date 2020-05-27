@@ -6,10 +6,10 @@ use backend\models\SpecialitySymptom;
 use backend\models\Symptom;
 use Yii;
 use backend\models\Speciality;
-use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\models\HelperMethods;
 
 /**
  * SpecialityController implements the CRUD actions for Speciality model.
@@ -100,7 +100,7 @@ class SpecialityController extends Controller
                 ->where(['speciality_id' => $id])
                 ->asArray()->all();
 
-            $model->symptoms = $model->formatSymptomArray($array);
+            $model->symptoms = HelperMethods::formatArray($array,'symptom_id');
             $symptoms = Symptom::find()->asArray()->all();
 
             return $this->render('update', [

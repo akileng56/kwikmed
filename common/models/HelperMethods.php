@@ -9,7 +9,7 @@ use yii\db\Query;
 /**
  * Dropdowns for the casetracker app
  */
-class NogamuHelperMethods {
+class HelperMethods {
 
     /**
      * Welcome Email for Newly registsred Users
@@ -61,6 +61,15 @@ class NogamuHelperMethods {
             ->setTo($user->email)
             ->setSubject($title)
             ->send();
+    }
+
+    public static function formatArray($array,$key){
+        $modules = [];
+        foreach($array as $value){
+            $modules[] = $value[$key];
+        }
+
+        return $modules;
     }
 
 }

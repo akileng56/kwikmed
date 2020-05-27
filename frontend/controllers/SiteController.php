@@ -22,7 +22,7 @@ use common\models\OrderItem;
 use common\models\Product;
 use common\models\LoginForm;
 use common\models\User;
-use common\models\NogamuHelperMethods;
+use common\models\HelperMethods;
 
 use frontend\models\SearchForm;
 use frontend\models\PasswordResetRequestForm;
@@ -229,7 +229,7 @@ class SiteController extends Controller
         $model = new SignupForm();
 
         if ($model->load(Yii::$app->request->post())) {
-            if ($user = $model->signup()) {
+            if ($user = $model->signup('user')) {
                 Yii::$app->session->setFlash('success', 'Account created successfully...');
                 $this->goHome();
             } else {
@@ -371,7 +371,7 @@ class SiteController extends Controller
                 $user = User::findOne($model->user_id);
                 if($user->email && Yii::$app->params['enableEmail']){
                     $orderItems =  OrderItem::find()->where(['order_id'=>$model->id])->all();
-                    NogamuHelperMethods::sendOrderStatusEmail($user,$model,$orderItems,'Received and will be processed soon.');
+                    HelperMethods::sendOrderStatusEmail($user,$model,$orderItems,'Received and will be processed soon.');
                 }
                 Yii::$app->session->addFlash('success', 'Thanks for your order. We will contact you soon.');
                 return $this->redirect(['site/orders']);
