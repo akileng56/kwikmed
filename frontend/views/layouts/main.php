@@ -112,8 +112,10 @@ $user = Yii::$app->user->identity;
         <div class="scroll-sidebar">
             <!-- Sidebar navigation-->
             <nav class="sidebar-nav">
-                <!-- Add a check on the person logged in -->
-                <?= $this->render('./sidemenu/user'); ?>
+                <?= $user->role == 'user'
+                    ? $this->render('./sidemenu/user')
+                    : $this->render('./sidemenu/doctor')
+                ?>
             </nav>
             <!-- End Sidebar navigation -->
         </div>

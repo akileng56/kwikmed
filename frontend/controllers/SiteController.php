@@ -111,7 +111,7 @@ class SiteController extends Controller
             $page = "";
             switch ($type) {
                 case "doctor":
-                    $page = Url::to(['specialities']);
+                    $page = Url::to(['doctor/schedule']);
                     break;
                 default:
                     $page = Url::to(['specialities']);

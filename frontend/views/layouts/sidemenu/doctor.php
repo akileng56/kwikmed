@@ -5,28 +5,32 @@
  * Date: 5/22/2020
  * Time: 12:34 AM
  */
+use yii\helpers\Url;
 ?>
 
 <ul id="sidebarnav">
     <li>
-        <a href="#" class="waves-effect"><i class="fa fa-clock-o m-r-10" aria-hidden="true"></i>Dashboard</a>
+        <a href="<?= Url::to(['doctor/profile']); ?>" class="waves-effect">
+            <i class="ti-user" aria-hidden="true"></i>
+             My Profile
+        </a>
     </li>
     <li>
-        <a href="#" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
+        <a href="<?= Url::to(['doctor/consultations']); ?>" class="waves-effect">
+            <i class="fa fa-columns m-r-10" aria-hidden="true"></i>
+            Pending Consultations
+        </a>
     </li>
     <li>
-        <a href="#" class="waves-effect"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
+        <a href="<?= Url::to(['doctor/consultations']); ?>" class="waves-effect">
+            <i class="fa fa-tasks" aria-hidden="true"></i>
+            All Consultations
+        </a>
     </li>
     <li>
-        <a href="#" class="waves-effect"><i class="fa fa-font m-r-10" aria-hidden="true"></i>Icons</a>
-    </li>
-    <li>
-        <a href="#" class="waves-effect"><i class="fa fa-globe m-r-10" aria-hidden="true"></i>Google Map</a>
-    </li>
-    <li>
-        <a href="#" class="waves-effect"><i class="fa fa-columns m-r-10" aria-hidden="true"></i>Blank Page</a>
-    </li>
-    <li>
-        <a href="#" class="waves-effect"><i class="fa fa-info-circle m-r-10" aria-hidden="true"></i>Error 404</a>
+        <a href="<?= Url::to(['doctor/schedule']); ?>" class="waves-effect">
+            <i class="fa fa-clock-o m-r-10" aria-hidden="true"></i>
+            My Schedule
+        </a>
     </li>
 </ul>

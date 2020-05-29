@@ -9,7 +9,6 @@ use common\models\User;
 use frontend\models\SignupForm;
 use Yii;
 use backend\models\Doctor;
-use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
