@@ -25,6 +25,7 @@ use yii\helpers\Html;
                 <th>Years of Exp</th>
                 <th>License No</th>
                 <th></th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -35,6 +36,11 @@ use yii\helpers\Html;
                     <td> <?= $doctor['hospital']; ?>  </td>
                     <td> <?= $doctor['years_of_exp']; ?>  </td>
                     <td> <?= $doctor['license_id']; ?>  </td>
+                    <td>
+                        <a href='<?= Url::to(['doctor/view', 'id' => $doctor['doctor_id']]); ?>' class='btn btn-default'>
+                            <i class='fa fa-eye'></i> view
+                        </a>
+                    </td>
                     <td>
                         <a href='<?= Url::to(['doctor/update', 'id' => $doctor['doctor_id']]); ?>' class='btn btn-default'>
                             <i class='fa fa-pencil'></i> Edit

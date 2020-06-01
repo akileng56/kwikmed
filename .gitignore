@@ -9,7 +9,7 @@
 cert/*
 backend/assets/*
 backend/attachments/*
-backend/newsImages/*
+backend/images/*
 !backend/assets/AppAsset.php
 frontend/assets/*
 !frontend/assets/AppAsset.php

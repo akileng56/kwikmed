@@ -55,8 +55,10 @@ class DoctorController extends Controller
      */
     public function actionView($id)
     {
+        $languages = DoctorLanguage::find(['doctor_id' => $id])->asArray()->all();
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'languages' => $languages
         ]);
     }
 
@@ -179,9 +181,25 @@ class DoctorController extends Controller
     public function actionProfile($id)
     {
         $model = $this->findModel($id);
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            // unlink(Yii::getAlias('@app').'/../../uploads/banners/' . $oldImage);
-            return $this->redirect(['all']);
+
+        if ($model->load(Yii::$app->request->post())) {
+            $oldPhoto = $model->photo;
+            $model->setScenario(Doctor::SCENARIO_UPLOAD);
+            $attachment_files = UploadedFile::getInstances($model, 'attachments');
+            $results = $model->upload($attachment_files, $model);
+
+            if($results['status'] === 'success'){
+                unlink(Yii::getAlias('@webroot').'/images/' . $oldPhoto);
+
+                Yii::$app->session->setFlash('success', 'Doctor\'s photo successfully updated');
+                return $this->redirect(['view', 'id' => $id]);
+            }else {
+                $model->delete();
+                Yii::$app->session->setFlash('error', "Doctor image was not updated because the following file(s) uploaded " .
+                    "are either corrupted or empty: " . implode(", ", $results['files']) .
+                    "<br>Please verify that the files are valid before uploading.");
+                return $this->goBack();
+            }
         } else {
             return $this->render('profile', [
                 'model' => $model,
