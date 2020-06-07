@@ -16,6 +16,7 @@ use Yii;
  */
 class Patient extends \yii\db\ActiveRecord
 {
+    public $dob_holder;
     /**
      * @inheritdoc
      */
@@ -30,9 +31,9 @@ class Patient extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'fullname', 'dob', 'gender', 'relation'], 'required'],
+            [['user_id', 'fullname', 'dob', 'gender', 'relation', 'dob_holder'], 'required'],
             [['user_id', 'dob'], 'integer'],
-            [['fullname'], 'string', 'max' => 100],
+            [['fullname', 'dob_holder'], 'string', 'max' => 100],
             [['gender', 'relation'], 'string', 'max' => 60],
         ];
     }
@@ -44,11 +45,12 @@ class Patient extends \yii\db\ActiveRecord
     {
         return [
             'patient_id' => 'Patient ID',
-            'user_id' => 'User ID',
+            'user_id' => 'User',
             'fullname' => 'Fullname',
-            'dob' => 'Dob',
+            'dob' => 'Date of Birth',
             'gender' => 'Gender',
             'relation' => 'Relation',
+            'dob_holder' => 'Date of Birth',
         ];
     }
 }

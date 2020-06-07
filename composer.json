@@ -35,7 +35,8 @@
         "miloschuman/yii2-highcharts-widget": "^5.0",
         "omnilight/yii2-shopping-cart": "*",
         "yiisoft/yii2-redis": "~2.0.0",
-        "yiisoft/yii2-httpclient": "*"
+        "yiisoft/yii2-httpclient": "*",
+        "nirvana-msu/yii2-infinite-scroll": "1.0.*@dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

@@ -20,7 +20,7 @@ use yii\helpers\Url;
                 <ul aria-expanded="false" class="collapse" style="">
                     <li><a href="<?= Url::to(['user/all-users']); ?>">User Accounts</a></li>
                     <li><a href="<?= Url::to(['doctor/all']); ?>">Doctors</a></li>
-                    <li><a href="#">Patients</a></li>
+                    <li><a href="<?= Url::to(['patient/all']); ?>">Patients</a></li>
                 </ul>
             </li>
             <li><a href="<?= Url::to(['speciality/all']); ?>" title="Specialities">
