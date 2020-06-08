@@ -19,6 +19,11 @@ use Yii;
  */
 class Schedule extends \yii\db\ActiveRecord
 {
+    public $start_time_holder;
+    public $break_start_time_holder;
+    public $break_end_time_holder;
+    public $end_time_holder;
+
     /**
      * @inheritdoc
      */
@@ -33,9 +38,9 @@ class Schedule extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['doctor_id', 'day_of_week', 'start_time', 'break_start_time', 'break_end_time', 'end_time', 'slot_duration', 'availability_status'], 'required'],
+            [['start_time_holder','break_start_time_holder','break_end_time_holder','end_time_holder','doctor_id', 'day_of_week', 'start_time', 'break_start_time', 'break_end_time', 'end_time', 'slot_duration', 'availability_status'], 'required'],
             [['doctor_id', 'start_time', 'break_start_time', 'break_end_time', 'end_time', 'slot_duration', 'availability_status'], 'integer'],
-            [['day_of_week'], 'string', 'max' => 100],
+            [['day_of_week', 'start_time_holder','break_start_time_holder','break_end_time_holder','end_time_holder'], 'string', 'max' => 100],
         ];
     }
 
@@ -47,13 +52,18 @@ class Schedule extends \yii\db\ActiveRecord
         return [
             'schedule_id' => 'Schedule ID',
             'doctor_id' => 'Doctor ID',
-            'day_of_week' => 'Day Of Week',
+            'day_of_week' => 'Day Of The Week',
             'start_time' => 'Start Time',
             'break_start_time' => 'Break Start Time',
             'break_end_time' => 'Break End Time',
             'end_time' => 'End Time',
             'slot_duration' => 'Slot Duration',
             'availability_status' => 'Availability Status',
+            'start_time_holder' => 'Start Of Day Time',
+            'break_start_time_holder' => 'Break Start Time',
+            'break_end_time_holder' => 'Break End Time',
+            'end_time_holder' => 'End Of Day Time'
+
         ];
     }
 }

@@ -28,3 +28,9 @@
     color: green;
     margin-right: 4px;
 }
+.schedule-form .input-group-addon.picker {
+    display: none;
+}
+.schedule-text {
+    text-transform: capitalize;
+}

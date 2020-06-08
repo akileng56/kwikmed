@@ -2,6 +2,8 @@
 
 namespace frontend\controllers;
 
+use common\models\Patient;
+use frontend\models\Schedule;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -32,13 +34,17 @@ class DoctorController extends Controller
      */
     public function actionConsultations()
     {
-       return $this->render('myconsultations');
+        return $this->render('myconsultations');
     }
-
 
     public function actionSchedule()
     {
-        return $this->render('schedule');
+        $id = Yii::$app->user->id;
+        $schedules = Schedule::find(['doctor_id'=>$id])->asArray()->all();
+
+        return $this->render('schedule',[
+            'schedules' => $schedules,
+        ]);
     }
 
     public function actionProfile()
@@ -46,11 +52,29 @@ class DoctorController extends Controller
         return $this->render('profile');
     }
 
+    public function actionNewschedule()
+    {
+        $model = new Schedule();
+        if ($model->load(Yii::$app->request->post())) {
+            $model->doctor_id = Yii::$app->user->id;
+            $model->start_time = strtotime($model->start_time_holder);
+            $model->break_start_time = strtotime($model->break_start_time_holder);
+            $model->break_end_time = strtotime($model->break_end_time_holder);
+            $model->end_time = strtotime($model->end_time_holder);
 
+            $model->save();
 
+            $this->redirect(['doctor/schedule']);
+        } else {
+            return $this->render('newschedule',[
+                'model' => $model
+            ]);
+        }
 
+    }
 
+    public function actionEditSchedule($id)
+    {
 
-
-
+    }
 }
