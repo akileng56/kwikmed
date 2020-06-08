@@ -2,11 +2,12 @@
 
 namespace frontend\controllers;
 
-use common\models\Patient;
-use frontend\models\Schedule;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
+use backend\models\Doctor;
+use frontend\models\Schedule;
+use backend\models\DoctorLanguage;
 
 /**
  * DoctorController handles functions of a doctor on frontend.
@@ -49,7 +50,14 @@ class DoctorController extends Controller
 
     public function actionProfile()
     {
-        return $this->render('profile');
+        $id = Yii::$app->user->id;
+        $model = Doctor::find()->where(['user_id'=>$id])->one();
+        $languages = DoctorLanguage::find(['doctor_id' => $model->doctor_id])->asArray()->all();
+
+        return $this->render('profile', [
+            'model' => $model,
+            'languages' => $languages
+        ]);
     }
 
     public function actionNewschedule()
