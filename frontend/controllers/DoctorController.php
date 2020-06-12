@@ -83,6 +83,24 @@ class DoctorController extends Controller
 
     public function actionEditSchedule($id)
     {
+        $model = Schedule::findOne($id);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->start_time = strtotime($model->start_time_holder);
+            $model->break_start_time = strtotime($model->break_start_time_holder);
+            $model->break_end_time = strtotime($model->break_end_time_holder);
+            $model->end_time = strtotime($model->end_time_holder);
 
+            $model->save();
+            $this->redirect(['doctor/schedule']);
+        } else {
+            $model->start_time_holder = date('h:i A', $model->start_time);
+            $model->break_start_time_holder = date('h:i A', $model->break_start_time);
+            $model->break_end_time_holder = date('h:i A', $model->break_end_time);
+            $model->end_time_holder = date('h:i A', $model->end_time);
+
+            return $this->render('editschedule',[
+                'model' => $model
+            ]);
+        }
     }
 }

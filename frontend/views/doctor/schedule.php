@@ -48,7 +48,7 @@ $class = 'round';
                             } else if ($schedule['day_of_week'] == 'saturday') {
                                 $cssClass = $class.' round-default';
                             } else {
-                                $cssClass = $class.' round-warning';
+                                $cssClass = $class.' round-success';
                             }
                             ?>
                             <tr>
